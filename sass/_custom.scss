@@ -1,0 +1,106 @@
+@import "vars";
+
+body,
+html {
+   height: 100%;
+}
+
+body {
+   min-width: 320px;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 150%;
+   color: $color__body;
+}
+
+// Прижатие Футера к низу
+body {
+   display: flex;
+   flex-direction: column;
+}
+
+.wrapper {
+   flex: 1 0 auto;
+}
+
+.footer {
+   flex-shrink: 0;
+}
+
+// Конец Прижатие Футера к низу
+
+.wrapper {
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1200px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.hidden {
+   display: none;
+}
+
+section {
+   padding: 80px 0;
+}
+
+/* Font Style =================================================== */
+
+// Heading
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   color: $color__title;
+   font-family: "Roboto", sans-serif;
+   line-height: 1.2;
+}
+
+h1 {
+   font-size: 56px;
+   font-weight: 800;
+}
+
+h2 {
+   font-size: 48px;
+   font-weight: 800;
+}
+
+h3 {
+   font-size: 36px;
+   font-weight: 700;
+}
+
+h4 {
+   font-size: 24px;
+   font-weight: 700;
+}
+
+h5 {
+   font-size: 18px;
+   font-weight: 500;
+}
+
+h6 {
+   font-size: 16px;
+   font-weight: 500;
+}
+
+// Link
+a {
+   line-height: 1;
+   color: $color__body;
+   text-decoration: none;
+   transition: all 0.25s ease-in-out;
+   cursor: pointer;
+
+   &:hover {
+      text-decoration: underline;
+   }
+}

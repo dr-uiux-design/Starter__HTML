@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px 20px;
   }
 
   &__container {
@@ -23,20 +24,30 @@
     padding: 30px;
     max-width: 500px;
     max-height: 100vh;
-    border-radius: 4px;
+    border-radius: 10px;
     overflow-y: auto;
     box-sizing: border-box;
+    position: relative;
   }
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &__close {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='none' d='M-5-5h24v24H-5z'/%3e%3cpath fill='%231D1D1D' fill-rule='evenodd' d='M13.3.71a.996.996 0 0 0-1.41 0L7 5.59 2.11.7A.996.996 0 1 0 .7 2.11L5.59 7 .7 11.89a.996.996 0 1 0 1.41 1.41L7 8.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L8.41 7l4.89-4.89c.38-.38.38-1.02 0-1.4Z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+    opacity: 0.6;
 
-    &__close {
-      &:before {
-        content: "\2715";
-      }
+    &:hover {
+      opacity: 1;
     }
   }
 
@@ -48,11 +59,6 @@
     line-height: 1.25;
     color: #00449e;
     box-sizing: border-box;
-  }
-
-  &__close {
-    background: transparent;
-    border: 0;
   }
 
   &__content {
